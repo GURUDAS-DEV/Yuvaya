@@ -1,16 +1,57 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Antic_Didone, Cormorant_Garamond, Poppins } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const cormorant_garamond = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
 });
+
+const anti_didone = Antic_Didone({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-anti-didone",
+})
+
+const newTitle = localFont({
+  src: [
+    {
+      path: "../public/Fonts/new-title-font-family/NewTitle-Extralight.otf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../public/Fonts/new-title-font-family/NewTitle-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/Fonts/new-title-font-family/NewTitle-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/Fonts/new-title-font-family/NewTitle-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/Fonts/new-title-font-family/NewTitle-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-new-title",
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,7 +66,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${cormorant_garamond.variable} ${poppins.variable} ${newTitle.variable} ${anti_didone.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
