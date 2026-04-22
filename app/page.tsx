@@ -4,6 +4,7 @@ import MiddleBanner from "@/Components/Landing/MiddleBanner";
 import Navbar from "@/Components/Navbar";
 import ShopFromUs from "@/Components/Landing/ShopFromUs";
 import LowerBanner from "@/Components/Landing/LowerBanner";
+import AboutUs from "@/Components/Landing/AboutUs";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <MiddleBanner />
         <ShopFromUs />
         <LowerBanner />
+        <AboutUs />
       </main>
     </div>
   );
