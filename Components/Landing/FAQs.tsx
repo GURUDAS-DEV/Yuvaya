@@ -55,7 +55,7 @@ const FAQs = () => {
   };
 
   return (
-    <section className="box-border flex min-h-min w-full flex-col items-center justify-center gap-12.5 overflow-clip bg-[#fffdf2] px-0 pt-10 pb-15">
+    <section className="box-border flex min-h-min w-full flex-col items-center justify-center gap-8 overflow-clip bg-[#fffdf2] px-4 pt-8 pb-10 md:gap-12.5 md:px-0 md:pt-10 md:pb-15">
       <div className="flex justify-center items-center flex-col gap-2">
         {/* FAQs badge */}
         <div className="box-border flex h-[28px] min-w-min flex-col items-center justify-center overflow-clip rounded-full bg-[#26312d] px-3">
@@ -65,12 +65,12 @@ const FAQs = () => {
         </div>
 
         {/* Heading */}
-        <h2 className="whitespace-pre text-center font-antic-didone text-[40px] font-[600] leading-[1] tracking-[0.03em] text-[#000000]">
+        <h2 className="whitespace-pre text-center font-antic-didone text-[28px] font-[600] leading-[1.1] tracking-[0.03em] text-[#000000] md:text-[40px] md:leading-[1]">
           Frequently Asked Questions
         </h2>
       </div>
       {/* Accordion container */}
-      <div className="flex w-full max-w-[950px] min-w-[1026px] flex-col items-center justify-start gap-3 rounded-2xl border-[3px] border-[#26312d] bg-[#26312d] p-[2px]">
+      <div className="flex w-full flex-col items-center justify-start gap-2 rounded-2xl border-[3px] border-[#26312d] bg-[#26312d] p-[2px] md:max-w-[950px] md:gap-3">
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index;
           return (
@@ -81,18 +81,18 @@ const FAQs = () => {
               {/* Question row */}
               <button
                 onClick={() => toggle(index)}
-                className="box-border flex h-[56px] w-full cursor-pointer flex-row items-center justify-between gap-3 px-[18px] text-left"
+                className="box-border flex min-h-[48px] w-full cursor-pointer flex-row items-center justify-between gap-3 px-4 text-left md:h-[56px] md:px-[18px]"
               >
-                <span className="flex-1 whitespace-pre-wrap font-sans text-[18px] font-medium leading-[1.4] text-[#000000]">
+                <span className="flex-1 whitespace-pre-wrap font-sans text-[15px] font-medium leading-[1.4] text-[#000000] md:text-[18px]">
                   {faq.question}
                 </span>
-                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#26312d]">
+                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#26312d] md:h-7 md:w-7">
                   <div className="relative flex items-center justify-center">
                     {/* Horizontal line (always visible) */}
-                    <div className="h-[3px] w-[18px] rounded-full bg-[#fffdf2]" />
+                    <div className="h-[2px] w-[14px] rounded-full bg-[#fffdf2] md:h-[3px] md:w-[18px]" />
                     {/* Vertical line (rotates and merges into horizontal to form minus) */}
                     <motion.div
-                      className="absolute h-[18px] w-[3px] rounded-full bg-[#fffdf2]"
+                      className="absolute h-[14px] w-[2px] rounded-full bg-[#fffdf2] md:h-[18px] md:w-[3px]"
                       animate={{ rotate: isOpen ? 90 : 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       style={{ originY: 0.5, originX: 0.5 }}
@@ -112,10 +112,10 @@ const FAQs = () => {
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="box-border flex w-full flex-col items-center justify-start gap-3 px-[18px] pb-4 pt-0">
+                    <div className="box-border flex w-full flex-col items-center justify-start gap-2 px-4 pb-3 pt-0 md:gap-3 md:px-[18px] md:pb-4">
                       {/* Separator between question and answer */}
                       <div className="h-px w-full bg-gray-400" />
-                      <p className="w-full whitespace-pre-wrap text-left font-sans text-[14px] font-normal leading-[1.5] text-[#444444]">
+                      <p className="w-full whitespace-pre-wrap text-left font-sans text-[13px] font-normal leading-[1.5] text-[#444444] md:text-[14px]">
                         {faq.answer}
                       </p>
                     </div>

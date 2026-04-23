@@ -7,6 +7,7 @@ import ShopFromUs from "@/Components/Landing/ShopFromUs";
 import LowerBanner from "@/Components/Landing/LowerBanner";
 import AboutUs from "@/Components/Landing/AboutUs";
 import FAQs from "@/Components/Landing/FAQs";
+import Testimonials from "@/Components/Landing/Testimonials";
 import NewsLetter from "@/Components/Landing/NewsLetter";
 import VerticalInstaPost from "@/Components/Landing/VerticalInstaPost";
 import Footer from "@/Components/Footer";
@@ -23,9 +24,10 @@ export default function Home() {
         <ShopFromUs />
         <LowerBanner />
         <AboutUs />
+        <Testimonials />
         <FAQs />
-        <VerticalInstaPost />
         <NewsLetter />
+        <VerticalInstaPost />
         <Footer />
       </main>
     </div>

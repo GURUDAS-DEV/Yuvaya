@@ -49,7 +49,7 @@ const SachetSection = () => {
     return (
         <section
             className="relative w-full mb-10"
-            style={{ backgroundColor: "#fffdf2", height: "500px", overflow: "visible" }}
+            style={{ backgroundColor: "#fffdf2", overflow: "visible" }}
         >
             {/* ── Heading Section ─────────────────────────────────── */}
             <div
@@ -57,49 +57,37 @@ const SachetSection = () => {
                 style={{ padding: "35px 0px 0px 0px" }}
             >
                 <h2
-                    className="font-antic-didone whitespace-pre text-[50px] font-semibold leading-[1.2] tracking-[0.03em] text-black"
+                    className="font-antic-didone whitespace-pre text-center text-[28px] font-semibold leading-[1.2] tracking-[0.03em] text-black sm:text-[36px] lg:text-[50px]"
                 >
                     1 Sachet = 6 Powerful Complexes
                 </h2>
             </div>
 
-            {/* ── Content Section (cards row) ─────────────────────── */}
+            {/* ── Content Section (cards grid) ─────────────────────── */}
             <div
-                className="box-border flex w-full flex-row flex-nowrap items-end justify-evenly"
-                style={{
-                    height: "360px",
-                    padding: "30px 0px 0px 0px",
-                    alignContent: "flex-start",
-                    overflow: "visible",
-                }}
+                className="mx-auto grid max-w-7xl grid-cols-2 auto-rows-fr gap-3 px-3 py-6 sm:grid-cols-3 sm:gap-4 sm:px-5 sm:py-8 md:gap-5 md:px-8 lg:grid-cols-6 lg:gap-4 lg:px-10 lg:py-10"
             >
                 {complexes.map((item, index) => {
                     const isActive = activeCard === index;
 
                     return (
-                        /* Wrapper — fixed height, card anchored to bottom */
+                        /* Card wrapper — grid controls sizing */
                         <div
                             key={index}
-                            className="relative cursor-pointer"
-                            style={{ width: "200px", height: "250px" }}
+                            className="relative cursor-pointer h-full"
                             onMouseEnter={() => setActiveCard(index)}
                             onMouseLeave={() => setActiveCard(null)}
+                            onClick={() => setActiveCard(isActive ? null : index)}
                         >
-                            {/* ── Dark card container — fixed size, overflow visible ── */}
+                            {/* ── Dark card container ── */}
                             <div
-                                className="absolute bottom-0 left-0 box-border flex w-[200px] flex-col flex-nowrap items-center overflow-visible rounded-[22px] bg-[#191a1d]"
-                                style={{
-                                    height: "230px",
-                                    padding: "10px 10px 25px 10px",
-                                    gap: "5px",
-                                }}
+                                className="box-border flex h-full w-full flex-col items-center rounded-2xl bg-[#191a1d] p-2 pb-4 sm:rounded-[20px] sm:p-2.5 sm:pb-5 md:rounded-[22px] md:p-3 md:pb-6 lg:rounded-[22px] lg:p-2.5 lg:pb-5"
                             >
                                 {/* ── Card image — translates up on hover ── */}
                                 <motion.div
-                                    className="relative w-full shrink-0 overflow-hidden rounded-[14px]"
-                                    style={{ height: "176px" }}
+                                    className="relative w-full shrink-0 overflow-hidden rounded-[10px] aspect-[4/3] sm:rounded-[12px] md:rounded-[14px]"
                                     animate={{
-                                        y: isActive ? -50 : 0,
+                                        y: isActive ? -40 : 0,
                                     }}
                                     transition={{
                                         duration: 0.35,
@@ -110,16 +98,16 @@ const SachetSection = () => {
                                         src={item.img}
                                         alt={item.title}
                                         fill
-                                        sizes="(max-width: 768px) 50vw, 190px"
+                                        sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 190px"
                                         className="object-cover object-center"
                                     />
                                 </motion.div>
 
                                 {/* ── Title — translates up on hover ──── */}
                                 <motion.span
-                                    className="font-poppins whitespace-pre text-center text-[14px] font-normal leading-[1.2] tracking-[0em] text-white"
+                                    className="mt-1.5 font-poppins whitespace-pre-wrap text-center text-[11px] font-normal leading-[1.2] tracking-[0em] text-white sm:mt-2 sm:text-[13px] md:text-[14px]"
                                     animate={{
-                                        y: isActive ? -35 : 0,
+                                        y: isActive ? -28 : 0,
                                     }}
                                     transition={{
                                         duration: 0.35,
@@ -131,7 +119,7 @@ const SachetSection = () => {
 
                                 {/* ── Description (hover reveal) ───────── */}
                                 <motion.p
-                                    className="font-poppins w-full break-words text-center text-[11px] font-normal leading-[1.2] tracking-[0em]"
+                                    className="font-poppins w-full break-words text-center text-[9px] font-normal leading-[1.2] tracking-[0em] sm:text-[10px] md:text-[11px]"
                                     style={{
                                         color: "rgba(255, 255, 255, 0.69)",
                                         whiteSpace: "pre-wrap",
@@ -140,7 +128,7 @@ const SachetSection = () => {
                                     }}
                                     animate={{
                                         opacity: isActive ? 1 : 0,
-                                        y: isActive ? -30 : 20,
+                                        y: isActive ? -22 : 15,
                                     }}
                                     transition={{
                                         duration: 0.3,

@@ -41,14 +41,14 @@ const VerticalInstaPost = () => {
     return (
         <section
             id="insta-posts"
-            className="relative w-full overflow-hidden py-16"
+            className="relative w-full overflow-hidden py-8 sm:py-12 md:py-16"
             style={{ backgroundColor: "#fffdf2" }}
         >
 
             {/* Scrolling container */}
             <div className="relative w-full overflow-hidden">
                 <motion.div
-                    className="flex w-max flex-row flex-nowrap gap-3"
+                    className="flex w-max flex-row flex-nowrap gap-2 sm:gap-3"
                     animate={{ x: ["0%", "-50%"] }}
                     transition={{
                         repeat: Infinity,
@@ -62,31 +62,25 @@ const VerticalInstaPost = () => {
                             href="https://www.instagram.com/yuvaya"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative block shrink-0 overflow-hidden rounded-[8px]"
-                            style={{
-                                width: "400px",
-                                height: "400px",
-                            }}
+                            className="group relative block shrink-0 overflow-hidden rounded-[8px] w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[400px] md:h-[400px]"
                         >
                             {/* Post image */}
                             <Image
                                 src={post.src}
                                 alt={post.alt}
                                 fill
-                                sizes="(max-width: 768px) 100vw, 400px"
+                                sizes="(max-width: 640px) 260px, (max-width: 768px) 320px, 400px"
                                 priority={index < 4}
                                 className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
                             />
 
                             {/* Hover overlay — blur + Instagram icon */}
                             <div
-                                className="absolute inset-0 z-10 flex flex-row flex-wrap items-center justify-center gap-[10px] overflow-visible p-0 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+                                className="absolute inset-0 z-10 flex items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
                                 style={{
-                                    flex: "1",
                                     WebkitBackdropFilter: "blur(7px)",
                                     backdropFilter: "blur(7px)",
                                     backgroundColor: "rgba(122, 122, 122, 0.11)",
-                                    borderRadius: "0px",
                                 }}
                             >
                                 <InstagramIcon />

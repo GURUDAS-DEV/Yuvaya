@@ -18,27 +18,27 @@ const cards = [
 const AboutUs = () => {
     return (
         /* Parent div: w-100%, h-763px, flex-col, justify-end, padding 40px 0 60px 0, gap 30px */
-        <section className="box-border flex  rounded-3xl mt-3 min-h-screen w-full flex-col items-center justify-end gap-[30px] overflow-clip bg-[#26312d] px-0 pt-[40px] pb-[60px]">
-            {/* About Us heading: antic didone, 60px, tracking 0.01em, color #fffdf2 */}
-            <h2 className="z-[1] mt-10 whitespace-pre font-antic-didone text-[64px] font-semibold leading-[1.2] tracking-[0.01em] text-[#fffdf2]">
+        <section className="box-border flex rounded-3xl mt-3 min-h-screen w-full flex-col items-center justify-end gap-6 overflow-clip bg-[#26312d] px-4 pt-10 pb-10 sm:gap-8 sm:px-8 md:gap-[30px] md:px-0 md:pt-[40px] md:pb-[60px]">
+            {/* About Us heading */}
+            <h2 className="z-[1] mt-6 whitespace-pre font-antic-didone text-[36px] font-semibold leading-[1.2] tracking-[0.01em] text-[#fffdf2] sm:mt-10 sm:text-[48px] md:text-[64px]">
                 About Us
             </h2>
 
             {/* Cards row */}
-            <div className="flex w-full flex-1 flex-row items-stretch justify-center gap-[30px] px-[60px]">
+            <div className="flex w-full flex-1 flex-col items-stretch justify-center gap-4 px-4 sm:flex-row sm:gap-6 sm:px-6 md:flex-row md:items-stretch md:justify-center md:gap-[30px] md:px-[60px]">
                 {cards.map((card, i) => (
-                    /* Card: 30% width, flex-col, justify-start, padding 30px, bg #34803c, gap 10px, rounded 20px, border 4px #014d07 */
+                    /* Card */
                     <div
                         key={i}
-                        className="box-border flex flex-1 flex-col items-center justify-start gap-[10px] overflow-clip rounded-[20px] border-[4px] border-[#014d07] bg-[#34803c] p-[30px]"
+                        className="box-border flex flex-1 flex-col items-center justify-start gap-[10px] overflow-clip rounded-2xl border-[4px] border-[#014d07] bg-[#34803c] p-4 sm:rounded-[20px] sm:p-5 md:p-[30px]"
                     >
-                        {/* Card title: antic didone, 35px, font-weight 400, tracking 0.04em */}
-                        <h3 className="whitespace-pre font-antic-didone text-[35px] font-semibold leading-[1.2] tracking-[0.04em] text-[#fffdf2]">
+                        {/* Card title */}
+                        <h3 className="whitespace-pre font-antic-didone text-[24px] font-semibold leading-[1.2] tracking-[0.04em] text-[#fffdf2] sm:text-[28px] md:text-[35px]">
                             {card.title}
                         </h3>
 
-                        {/* Card body: antic didone, 19px, font-weight 400, tracking 0.04em, text-center, line-height 1.2 */}
-                        <p className="w-full break-words whitespace-pre-wrap text-center font-antic-didone text-[22px] font-semibold mt-3 leading-[1.2] tracking-[0.04em] text-[#fffdf2]">
+                        {/* Card body */}
+                        <p className="w-full break-words whitespace-pre-wrap text-center font-antic-didone text-[14px] font-semibold mt-2 leading-[1.3] tracking-[0.04em] text-[#fffdf2] sm:mt-3 sm:text-[17px] sm:leading-[1.2] md:text-[22px]">
                             {card.body}
                         </p>
                     </div>

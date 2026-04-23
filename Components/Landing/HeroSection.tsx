@@ -1,121 +1,149 @@
 import Image from "next/image";
+import ZigzagSVG from "@/Components/Shared/ZigzagSVG";
 
 const HeroSection = () => {
   return (
-    <div className="relative box-border min-h-[750px]   w-full bg-white px-5 ">
+    <section className="relative w-full bg-white px-3 pb-6 pt-4 sm:px-5 sm:pb-8 sm:pt-5">
       {/* Yellow Gradient Box */}
-      <div className="relative box-border h-full min-h-[726px] w-full overflow-visible rounded-t-[40px] bg-[linear-gradient(180deg,#fffc60_0%,rgb(255,253,242)_100%)]">
-        {/* Left Text Content */}
-        <div className="absolute overflow-auto left-20 top-[48%] z-10 flex h-min min-w-[602px] -translate-y-1/2 flex-col items-start justify-center gap-[20px] overflow-clip p-0">
-          <span
-            className="font-poppins whitespace-pre text-[20px] font-bold uppercase leading-[1.2] tracking-normal text-[#11731b]"
-          >
-            CLEAN. FUNCTIONAL. STUDIED
-          </span>
+      <div className="relative w-full overflow-hidden rounded-t-[28px] bg-[linear-gradient(180deg,#fffc60_0%,rgb(255,253,242)_100%)] px-4 pb-8 pt-10 sm:rounded-t-[32px] sm:px-6 sm:pb-10 md:px-10 md:pb-14 md:pt-12 lg:min-h-[726px] lg:rounded-t-[40px] lg:px-16 lg:pt-12">
+        <div className="mx-auto w-full max-w-[1320px] lg:relative lg:min-h-[660px]">
+          {/* Left Text Content */}
+          <div className="z-10 flex w-full max-w-[640px] flex-col items-center gap-4 text-center sm:gap-5 md:items-start md:text-left lg:absolute lg:left-8 lg:top-[40%] lg:w-[56%] lg:max-w-[680px] lg:-translate-y-1/2">
+            <span className="font-poppins text-[13px] font-bold uppercase leading-[1.25] tracking-[0.04em] text-[#11731b] sm:text-[16px] md:text-[18px]">
+              CLEAN. FUNCTIONAL. STUDIED
+            </span>
 
-          <div className="flex w-full sticky z-10 flex-col gap-0">
-            <h1
-              className="font-antic-didone m-0 whitespace-pre text-[85px] pt-2 font-bold capitalize leading-[1] tracking-[0.03em] text-[#11731b]"
-            >
-              WORLD&apos;S FIRST
-            </h1>
-            <h2
-              className="font-cormorant m-0 w-[80%]  whitespace-pre text-[60px] font-normal italic leading-[1.2] tracking-[-0.03em] text-[#11731b]"
-            >
-              Daily Greens + Collagen
-            </h2>
+            <div className="z-10 flex w-full flex-col gap-1">
+              <h1 className="font-antic-didone m-0 pt-1 text-[clamp(2rem,9vw,5.1rem)] font-bold capitalize leading-[0.98] tracking-[0.02em] text-[#11731b] lg:text-[85px]">
+                WORLD&apos;S FIRST
+              </h1>
+              <h2 className="font-cormorant m-0 mx-auto w-full max-w-[22ch] text-[clamp(1.7rem,7vw,3.75rem)] font-normal italic leading-[1.1] tracking-[-0.03em] text-[#11731b] md:mx-0 md:max-w-[85%] lg:w-[80%] lg:max-w-none lg:text-[60px]">
+                Daily Greens + Collagen
+              </h2>
+            </div>
+
+            <p className="font-poppins m-0 w-full max-w-[42ch] break-words text-[15px] font-normal leading-[1.45] tracking-[-0.01em] text-[#11731b] sm:text-[18px] md:max-w-[80%] md:text-[20px]">
+              A comprehensive blend with 25+ bioactives for a convenient and easy to
+              stick routine.
+            </p>
+
+            <button className="mt-4 box-border flex h-[52px] w-[170px] cursor-pointer flex-row items-center justify-end gap-3 overflow-hidden rounded-[100px] border-none bg-[#11731b] px-1 py-0 font-poppins sm:mt-6 sm:h-[56px] sm:w-[194px] sm:gap-4 md:mt-8 md:h-[60px] md:w-[214px]">
+              <span className="whitespace-pre text-[18px] font-medium leading-[1.2] tracking-normal text-[#fffdf2] sm:text-[21px] md:text-[24px]">
+                Shop Now
+              </span>
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#11731b] sm:h-10 sm:w-10 md:h-11 md:w-11">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 12H19"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M12 5L19 12L12 19"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
+            </button>
           </div>
 
-          <p
-            className="font-poppins m-0 w-full break-words whitespace-pre-wrap  font-normal leading-[1.2] tracking-[-0.03em] text-[#11731b] text-[22px] max-w-[80%]"
-          >
-            A comprehensive blend with 25+ bioactives for a convenient and easy to stick routine.
-          </p>
+          {/* Right Image Container */}
+          <div className="relative z-0 mt-4 flex w-full justify-center md:mt-2 lg:absolute right-[20%] lg:right-[15%] lg:top-[-95px] lg:mt-0 lg:w-auto lg:justify-end">
+            <div className="relative w-[min(84vw,420px)] sm:w-[min(66vw,470px)] md:w-[min(52vw,500px)] lg:w-[370px]">
+              <div className="relative aspect-[3/5] w-full overflow-visible">
+                <Image
+                  src="/Landing/Stand Up Pouch Front latest mockup.png"
+                  alt="Yuvaya Daily Greens + Collagen Pouch"
+                  fill
+                  sizes="(max-width: 639px) 84vw, (max-width: 767px) 66vw, (max-width: 1023px) 52vw, 370px"
+                  className="origin-bottom object-contain object-bottom lg:scale-[1.4]"
+                  priority
+                />
 
-          <button
-            className="box-border flex w-[214px] h-[60px] flex-row items-center justify-end gap-[16px] overflow-clip mt-10 rounded-[100px] border-none bg-[#11731b] pr-[5px] pl-0 py-0 font-poppins cursor-pointer"
-          >
-            <span className="whitespace-pre text-[24px] font-medium leading-[1.2] tracking-normal text-[#fffdf2]">Shop Now</span>
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white text-[#11731b]">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+                {/* Decorative Zigzags — percentage-based sizing keeps them compact & synced to image at every breakpoint */}
+                {/* Green — top right */}
+                <ZigzagSVG
+                  color="green"
+                  className="absolute -z-10 top-[7%] right-[12%] sm:right-[10%] lg:right-[8%] rotate-[85deg] sm:rotate-[75deg] lg:rotate-[68deg]"
+                  width={100}
+                  height={50}
+                  style={{
+                    width: "24%",
+                    height: "auto",
+                  }}
+                />
+                {/* Green — center left */}
+                <ZigzagSVG
+                  color="green"
+                  className="absolute z-20 top-[61%] right-[50%] sm:right-[48%] lg:right-[45%] rotate-[75deg] sm:rotate-[65deg] lg:rotate-[55deg]"
+                  width={100}
+                  height={65}
+                  style={{
+                    width: "24%",
+                    height: "auto",
+                  }}
+                />
+                {/* Green — bottom center */}
+                <ZigzagSVG
+                  color="green"
+                  className="absolute z-20 bottom-[5%] right-[32%] sm:right-[30%] lg:right-[28%] rotate-[30deg] sm:rotate-[22deg] lg:rotate-[14deg]"
+                  width={100}
+                  height={58}
+                  style={{
+                    width: "23%",
+                    height: "auto",
+                  }}
+                />
+                {/* Orange — top right (inside on mobile, peeks out on sm+) */}
+                <ZigzagSVG
+                  color="orange"
+                  className="absolute z-20 top-[24%] right-[-20%] sm:right-[-30%] lg:right-[-40%] rotate-[60deg] sm:rotate-[50deg] lg:rotate-[40deg]"
+                  width={115}
+                  height={72}
+                  style={{
+                    width: "27%",
+                    height: "auto",
+                  }}
+                />
+                {/* Orange — mid left */}
+                <ZigzagSVG
+                  color="orange"
+                  className="absolute z-20 top-[39%] left-[10%] sm:left-[12%] lg:left-[14%] rotate-[20deg] sm:rotate-[10deg] lg:rotate-[0deg]"
+                  width={100}
+                  height={75}
+                  style={{
+                    width: "24%",
+                    height: "auto",
+                  }}
+                />
+                {/* Orange — bottom right (inside on mobile, peeks out on sm+) */}
+                <ZigzagSVG
+                  color="orange"
+                  className="absolute z-20 bottom-[24%] right-[-15%] sm:right-[-24%] lg:right-[-33%] rotate-[-20deg] sm:rotate-[-12deg] lg:rotate-[-5deg]"
+                  width={110}
+                  height={70}
+                  style={{
+                    width: "30%",
+                    height: "auto",
+                  }}
+                />
+              </div>
             </div>
-          </button>
-        </div>
-
-        {/* Right Image Container */}
-        <div className="absolute right-[266px] -top-22 z-0 block h-full w-[410px] overflow-visible">
-          <div className="relative h-full w-full">
-            <Image
-              src="/Landing/Stand Up Pouch Front latest mockup.png"
-              alt="Yuvaya Daily Greens + Collagen Pouch"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="origin-bottom scale-[1.4] object-contain object-bottom"
-              priority
-            />
-
-            {/* ── Decorative Zigzag SVGs ──────────────────────────── */}
-
-            {/* Green — Top Left */}
-            <svg
-              className="absolute z-20 pointer-events-none"
-              style={{ top: "8%", left: "-28%", transform: "rotate(-35deg)", width: "110px", height: "70px" }}
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 81" fill="none" overflow="visible"
-            >
-              <path d="M 2.09 68.774 C 1.12 67.951 1.34 66.397 2.5 65.875 L 6.564 64.046 C 8.665 63.101 11.121 63.442 12.885 64.924 L 19.375 70.375 C 20.612 71.414 22.5 70.535 22.5 68.919 L 22.5 60.039 C 22.5 57.856 23.687 55.844 25.598 54.788 L 38.103 47.877 C 40.17 46.735 42.715 46.912 44.605 48.329 L 52.3 54.1 C 53.618 55.089 55.5 54.148 55.5 52.5 L 55.5 43.482 C 55.5 41.329 56.654 39.341 58.523 38.272 L 69.663 31.907 C 71.697 30.745 74.221 30.872 76.127 32.234 L 83.838 37.741 C 85.161 38.687 87 37.74 87 36.114 L 87 26.57 C 87 24.37 88.204 22.346 90.137 21.297 L 101.117 15.337 C 103.178 14.217 105.703 14.402 107.58 15.81 L 115.3 21.6 C 116.618 22.589 118.5 21.648 118.5 20 L 118.5 9.842 C 118.5 7.764 119.575 5.834 121.342 4.741 L 126.375 1.625 C 127.521 0.916 129 1.74 129 3.087 L 129 17.554 C 129 19.688 127.867 21.661 126.023 22.736 L 114.574 29.415 C 112.422 30.67 109.719 30.465 107.781 28.9 L 101.015 23.435 C 99.804 22.457 98 23.319 98 24.875 L 98 33.087 C 98 35.203 96.885 37.163 95.066 38.244 L 82.907 45.474 C 80.841 46.703 78.241 46.58 76.3 45.162 L 69.68 40.324 C 68.359 39.358 66.5 40.302 66.5 41.939 L 66.5 50.506 C 66.5 52.666 65.34 54.659 63.462 55.724 L 51.356 62.595 C 49.312 63.756 46.778 63.615 44.875 62.237 L 36.673 56.298 C 35.351 55.34 33.5 56.285 33.5 57.918 L 33.5 67.568 C 33.5 69.695 32.375 71.662 30.542 72.74 L 20.174 78.839 C 17.974 80.133 15.196 79.894 13.25 78.242 Z" fill="#11731b"/>
-            </svg>
-
-            {/* Green — Mid Left */}
-            <svg
-              className="absolute z-20 pointer-events-none"
-              style={{ top: "40%", left: "-35%", transform: "rotate(-25deg)", width: "120px", height: "75px" }}
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 81" fill="none" overflow="visible"
-            >
-              <path d="M 2.09 68.774 C 1.12 67.951 1.34 66.397 2.5 65.875 L 6.564 64.046 C 8.665 63.101 11.121 63.442 12.885 64.924 L 19.375 70.375 C 20.612 71.414 22.5 70.535 22.5 68.919 L 22.5 60.039 C 22.5 57.856 23.687 55.844 25.598 54.788 L 38.103 47.877 C 40.17 46.735 42.715 46.912 44.605 48.329 L 52.3 54.1 C 53.618 55.089 55.5 54.148 55.5 52.5 L 55.5 43.482 C 55.5 41.329 56.654 39.341 58.523 38.272 L 69.663 31.907 C 71.697 30.745 74.221 30.872 76.127 32.234 L 83.838 37.741 C 85.161 38.687 87 37.74 87 36.114 L 87 26.57 C 87 24.37 88.204 22.346 90.137 21.297 L 101.117 15.337 C 103.178 14.217 105.703 14.402 107.58 15.81 L 115.3 21.6 C 116.618 22.589 118.5 21.648 118.5 20 L 118.5 9.842 C 118.5 7.764 119.575 5.834 121.342 4.741 L 126.375 1.625 C 127.521 0.916 129 1.74 129 3.087 L 129 17.554 C 129 19.688 127.867 21.661 126.023 22.736 L 114.574 29.415 C 112.422 30.67 109.719 30.465 107.781 28.9 L 101.015 23.435 C 99.804 22.457 98 23.319 98 24.875 L 98 33.087 C 98 35.203 96.885 37.163 95.066 38.244 L 82.907 45.474 C 80.841 46.703 78.241 46.58 76.3 45.162 L 69.68 40.324 C 68.359 39.358 66.5 40.302 66.5 41.939 L 66.5 50.506 C 66.5 52.666 65.34 54.659 63.462 55.724 L 51.356 62.595 C 49.312 63.756 46.778 63.615 44.875 62.237 L 36.673 56.298 C 35.351 55.34 33.5 56.285 33.5 57.918 L 33.5 67.568 C 33.5 69.695 32.375 71.662 30.542 72.74 L 20.174 78.839 C 17.974 80.133 15.196 79.894 13.25 78.242 Z" fill="#11731b"/>
-            </svg>
-
-            {/* Green — Bottom Left */}
-            <svg
-              className="absolute z-20 pointer-events-none"
-              style={{ bottom: "12%", left: "-22%", transform: "rotate(-40deg)", width: "115px", height: "72px" }}
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 81" fill="none" overflow="visible"
-            >
-              <path d="M 2.09 68.774 C 1.12 67.951 1.34 66.397 2.5 65.875 L 6.564 64.046 C 8.665 63.101 11.121 63.442 12.885 64.924 L 19.375 70.375 C 20.612 71.414 22.5 70.535 22.5 68.919 L 22.5 60.039 C 22.5 57.856 23.687 55.844 25.598 54.788 L 38.103 47.877 C 40.17 46.735 42.715 46.912 44.605 48.329 L 52.3 54.1 C 53.618 55.089 55.5 54.148 55.5 52.5 L 55.5 43.482 C 55.5 41.329 56.654 39.341 58.523 38.272 L 69.663 31.907 C 71.697 30.745 74.221 30.872 76.127 32.234 L 83.838 37.741 C 85.161 38.687 87 37.74 87 36.114 L 87 26.57 C 87 24.37 88.204 22.346 90.137 21.297 L 101.117 15.337 C 103.178 14.217 105.703 14.402 107.58 15.81 L 115.3 21.6 C 116.618 22.589 118.5 21.648 118.5 20 L 118.5 9.842 C 118.5 7.764 119.575 5.834 121.342 4.741 L 126.375 1.625 C 127.521 0.916 129 1.74 129 3.087 L 129 17.554 C 129 19.688 127.867 21.661 126.023 22.736 L 114.574 29.415 C 112.422 30.67 109.719 30.465 107.781 28.9 L 101.015 23.435 C 99.804 22.457 98 23.319 98 24.875 L 98 33.087 C 98 35.203 96.885 37.163 95.066 38.244 L 82.907 45.474 C 80.841 46.703 78.241 46.58 76.3 45.162 L 69.68 40.324 C 68.359 39.358 66.5 40.302 66.5 41.939 L 66.5 50.506 C 66.5 52.666 65.34 54.659 63.462 55.724 L 51.356 62.595 C 49.312 63.756 46.778 63.615 44.875 62.237 L 36.673 56.298 C 35.351 55.34 33.5 56.285 33.5 57.918 L 33.5 67.568 C 33.5 69.695 32.375 71.662 30.542 72.74 L 20.174 78.839 C 17.974 80.133 15.196 79.894 13.25 78.242 Z" fill="#11731b"/>
-            </svg>
-
-            {/* Orange — Top Right */}
-            <svg
-              className="absolute z-20 pointer-events-none"
-              style={{ top: "5%", right: "-30%", transform: "rotate(30deg)", width: "115px", height: "72px" }}
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 81" fill="none" overflow="visible"
-            >
-              <path d="M 2.09 68.774 C 1.12 67.951 1.34 66.397 2.5 65.875 L 6.564 64.046 C 8.665 63.101 11.121 63.442 12.885 64.924 L 19.375 70.375 C 20.612 71.414 22.5 70.535 22.5 68.919 L 22.5 60.039 C 22.5 57.856 23.687 55.844 25.598 54.788 L 38.103 47.877 C 40.17 46.735 42.715 46.912 44.605 48.329 L 52.3 54.1 C 53.618 55.089 55.5 54.148 55.5 52.5 L 55.5 43.482 C 55.5 41.329 56.654 39.341 58.523 38.272 L 69.663 31.907 C 71.697 30.745 74.221 30.872 76.127 32.234 L 83.838 37.741 C 85.161 38.687 87 37.74 87 36.114 L 87 26.57 C 87 24.37 88.204 22.346 90.137 21.297 L 101.117 15.337 C 103.178 14.217 105.703 14.402 107.58 15.81 L 115.3 21.6 C 116.618 22.589 118.5 21.648 118.5 20 L 118.5 9.842 C 118.5 7.764 119.575 5.834 121.342 4.741 L 126.375 1.625 C 127.521 0.916 129 1.74 129 3.087 L 129 17.554 C 129 19.688 127.867 21.661 126.023 22.736 L 114.574 29.415 C 112.422 30.67 109.719 30.465 107.781 28.9 L 101.015 23.435 C 99.804 22.457 98 23.319 98 24.875 L 98 33.087 C 98 35.203 96.885 37.163 95.066 38.244 L 82.907 45.474 C 80.841 46.703 78.241 46.58 76.3 45.162 L 69.68 40.324 C 68.359 39.358 66.5 40.302 66.5 41.939 L 66.5 50.506 C 66.5 52.666 65.34 54.659 63.462 55.724 L 51.356 62.595 C 49.312 63.756 46.778 63.615 44.875 62.237 L 36.673 56.298 C 35.351 55.34 33.5 56.285 33.5 57.918 L 33.5 67.568 C 33.5 69.695 32.375 71.662 30.542 72.74 L 20.174 78.839 C 17.974 80.133 15.196 79.894 13.25 78.242 Z" fill="#FF8C00"/>
-            </svg>
-
-            {/* Orange — Mid Right */}
-            <svg
-              className="absolute z-20 pointer-events-none"
-              style={{ top: "42%", right: "-32%", transform: "rotate(20deg)", width: "120px", height: "75px" }}
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 81" fill="none" overflow="visible"
-            >
-              <path d="M 2.09 68.774 C 1.12 67.951 1.34 66.397 2.5 65.875 L 6.564 64.046 C 8.665 63.101 11.121 63.442 12.885 64.924 L 19.375 70.375 C 20.612 71.414 22.5 70.535 22.5 68.919 L 22.5 60.039 C 22.5 57.856 23.687 55.844 25.598 54.788 L 38.103 47.877 C 40.17 46.735 42.715 46.912 44.605 48.329 L 52.3 54.1 C 53.618 55.089 55.5 54.148 55.5 52.5 L 55.5 43.482 C 55.5 41.329 56.654 39.341 58.523 38.272 L 69.663 31.907 C 71.697 30.745 74.221 30.872 76.127 32.234 L 83.838 37.741 C 85.161 38.687 87 37.74 87 36.114 L 87 26.57 C 87 24.37 88.204 22.346 90.137 21.297 L 101.117 15.337 C 103.178 14.217 105.703 14.402 107.58 15.81 L 115.3 21.6 C 116.618 22.589 118.5 21.648 118.5 20 L 118.5 9.842 C 118.5 7.764 119.575 5.834 121.342 4.741 L 126.375 1.625 C 127.521 0.916 129 1.74 129 3.087 L 129 17.554 C 129 19.688 127.867 21.661 126.023 22.736 L 114.574 29.415 C 112.422 30.67 109.719 30.465 107.781 28.9 L 101.015 23.435 C 99.804 22.457 98 23.319 98 24.875 L 98 33.087 C 98 35.203 96.885 37.163 95.066 38.244 L 82.907 45.474 C 80.841 46.703 78.241 46.58 76.3 45.162 L 69.68 40.324 C 68.359 39.358 66.5 40.302 66.5 41.939 L 66.5 50.506 C 66.5 52.666 65.34 54.659 63.462 55.724 L 51.356 62.595 C 49.312 63.756 46.778 63.615 44.875 62.237 L 36.673 56.298 C 35.351 55.34 33.5 56.285 33.5 57.918 L 33.5 67.568 C 33.5 69.695 32.375 71.662 30.542 72.74 L 20.174 78.839 C 17.974 80.133 15.196 79.894 13.25 78.242 Z" fill="#FF8C00"/>
-            </svg>
-
-            {/* Orange — Bottom Right */}
-            <svg
-              className="absolute z-20 pointer-events-none"
-              style={{ bottom: "10%", right: "-25%", transform: "rotate(35deg)", width: "110px", height: "70px" }}
-              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 81" fill="none" overflow="visible"
-            >
-              <path d="M 2.09 68.774 C 1.12 67.951 1.34 66.397 2.5 65.875 L 6.564 64.046 C 8.665 63.101 11.121 63.442 12.885 64.924 L 19.375 70.375 C 20.612 71.414 22.5 70.535 22.5 68.919 L 22.5 60.039 C 22.5 57.856 23.687 55.844 25.598 54.788 L 38.103 47.877 C 40.17 46.735 42.715 46.912 44.605 48.329 L 52.3 54.1 C 53.618 55.089 55.5 54.148 55.5 52.5 L 55.5 43.482 C 55.5 41.329 56.654 39.341 58.523 38.272 L 69.663 31.907 C 71.697 30.745 74.221 30.872 76.127 32.234 L 83.838 37.741 C 85.161 38.687 87 37.74 87 36.114 L 87 26.57 C 87 24.37 88.204 22.346 90.137 21.297 L 101.117 15.337 C 103.178 14.217 105.703 14.402 107.58 15.81 L 115.3 21.6 C 116.618 22.589 118.5 21.648 118.5 20 L 118.5 9.842 C 118.5 7.764 119.575 5.834 121.342 4.741 L 126.375 1.625 C 127.521 0.916 129 1.74 129 3.087 L 129 17.554 C 129 19.688 127.867 21.661 126.023 22.736 L 114.574 29.415 C 112.422 30.67 109.719 30.465 107.781 28.9 L 101.015 23.435 C 99.804 22.457 98 23.319 98 24.875 L 98 33.087 C 98 35.203 96.885 37.163 95.066 38.244 L 82.907 45.474 C 80.841 46.703 78.241 46.58 76.3 45.162 L 69.68 40.324 C 68.359 39.358 66.5 40.302 66.5 41.939 L 66.5 50.506 C 66.5 52.666 65.34 54.659 63.462 55.724 L 51.356 62.595 C 49.312 63.756 46.778 63.615 44.875 62.237 L 36.673 56.298 C 35.351 55.34 33.5 56.285 33.5 57.918 L 33.5 67.568 C 33.5 69.695 32.375 71.662 30.542 72.74 L 20.174 78.839 C 17.974 80.133 15.196 79.894 13.25 78.242 Z" fill="#FF8C00"/>
-            </svg>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
