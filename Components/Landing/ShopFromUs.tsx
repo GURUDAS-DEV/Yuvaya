@@ -31,7 +31,7 @@ const ShopFromUs = () => {
         <section className="w-full pt-14 bg-[#fffdf2] px-6 ">
             {/* Section Header */}
             <div className="mb-12 flex flex-col items-center gap-2 text-center">
-                <h2 className="font-antic-didone font-medium text-[60px] leading-[1.2] tracking-[0.01em] text-black">
+                <h2 className="font-antic-didone font-semibold text-[60px] leading-[1.2] tracking-[0.01em] text-black">
                     Shop from Us
                 </h2>
                 <p className="font-poppins text-[22px] font-medium uppercase tracking-[0.12em] text-black">

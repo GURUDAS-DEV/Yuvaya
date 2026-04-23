@@ -18,7 +18,7 @@ const MiddleBanner = () => {
             {/* Heading Block explicitly matching CSS */}
             <div className="flex w-full justify-center z-10 items-center ">
                 <div className="flex flex-col justify-center items-center">
-                    <h1 className="font-antic-didone text-[63px] font-medium leading-[1.2] tracking-[0.03em] text-[#fffdf2]">
+                    <h1 className="font-antic-didone text-[63px] font-semibold leading-[1.2] tracking-[0.03em] text-[#fffdf2]">
                         Greens With Collagen
                     </h1>
                     <span className="flex text-center font-medium text-2xl pt-2 flex-col">
