@@ -52,7 +52,7 @@ const ShopFromUs = () => {
                                     onClick={() => setActiveThumbnail(i)}
                                     className={`relative box-border flex w-full flex-1 cursor-pointer items-center justify-center overflow-clip ${i === 0 ? "rounded-t-2xl" : ""} ${i === 2 ? "rounded-b-2xl" : ""} border-[4px] border-[#34803c] bg-[#fffdf2] transition-all`}
                                 >
-                                    <Image src={t.src} alt={t.alt} fill className="object-contain p-3" />
+                                    <Image src={t.src} alt={t.alt} fill sizes="(max-width: 768px) 30vw, 10vw" className="object-contain p-3" />
                                 </button>
                             ))}
                         </div>
@@ -72,6 +72,7 @@ const ShopFromUs = () => {
                                     src="/Landing/Stand Up Pouch Front latest mockup.png"
                                     alt="Collagreens Stand Up Pouch"
                                     fill
+                                    sizes="(max-width: 768px) 100vw, 50vw"
                                     className="absolute right-[10px] object-contain p-8"
                                     priority
                                 />
@@ -149,7 +150,7 @@ const ShopFromUs = () => {
                                         className={`relative box-border h-[100px] w-[100px] overflow-clip rounded-full border-[2px] bg-[#fffdf2] transition-all ${selectedVariant === i ? "border-[#34803c]" : "border-[#c9c9c9]"
                                             }`}
                                     >
-                                        <Image src={v.img} alt={v.label} fill className="object-contain p-2" />
+                                        <Image src={v.img} alt={v.label} fill sizes="(max-width: 768px) 20vw, 100px" className="object-contain p-2" />
                                     </div>
                                     <span
                                         className={`font-poppins text-[14px] ${selectedVariant === i ? "font-semibold text-black" : "font-normal text-gray-500"

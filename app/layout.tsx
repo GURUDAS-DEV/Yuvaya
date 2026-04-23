@@ -68,7 +68,7 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant_garamond.variable} ${poppins.variable} ${newTitle.variable} ${anti_didone.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-white">{children}</body>
     </html>
   );
 }

@@ -4,30 +4,30 @@ const HeroSection = () => {
   return (
     <div className="relative box-border min-h-[750px]   w-full bg-white px-5 ">
       {/* Yellow Gradient Box */}
-      <div className="relative box-border h-full min-h-[726px] w-full overflow-visible rounded-t-[40px] bg-[linear-gradient(180deg,_#fffc60_0%,_rgb(255,_253,_242)_100%)]">
+      <div className="relative box-border h-full min-h-[726px] w-full overflow-visible rounded-t-[40px] bg-[linear-gradient(180deg,#fffc60_0%,rgb(255,253,242)_100%)]">
         {/* Left Text Content */}
-        <div className="absolute left-20 top-[48%] z-10 flex h-min w-[602px] -translate-y-1/2 flex-col items-start justify-center gap-[20px] overflow-clip p-0">
+        <div className="absolute overflow-auto left-20 top-[48%] z-10 flex h-min min-w-[602px] -translate-y-1/2 flex-col items-start justify-center gap-[20px] overflow-clip p-0">
           <span
-            className="font-poppins whitespace-pre text-[18px] font-bold uppercase leading-[1.2] tracking-normal text-[#11731b]"
+            className="font-poppins whitespace-pre text-[20px] font-bold uppercase leading-[1.2] tracking-normal text-[#11731b]"
           >
             CLEAN. FUNCTIONAL. STUDIED
           </span>
 
-          <div className="flex w-full flex-col gap-0">
+          <div className="flex w-full sticky z-10 flex-col gap-0">
             <h1
               className="font-antic-didone m-0 whitespace-pre text-[85px] pt-2 font-bold capitalize leading-[1] tracking-[0.03em] text-[#11731b]"
             >
               WORLD&apos;S FIRST
             </h1>
             <h2
-              className="font-cormorant m-0 w-[80%]  whitespace-pre text-[56px] font-normal italic leading-[1.2] tracking-[-0.03em] text-[#11731b]"
+              className="font-cormorant m-0 w-[80%]  whitespace-pre text-[60px] font-normal italic leading-[1.2] tracking-[-0.03em] text-[#11731b]"
             >
               Daily Greens + Collagen
             </h2>
           </div>
 
           <p
-            className="font-poppins m-0 w-full break-words whitespace-pre-wrap text-[20px] font-normal leading-[1.2] tracking-[-0.03em] text-[#11731b]"
+            className="font-poppins m-0 w-full break-words whitespace-pre-wrap  font-normal leading-[1.2] tracking-[-0.03em] text-[#11731b] text-[22px] max-w-[80%]"
           >
             A comprehensive blend with 25+ bioactives for a convenient and easy to stick routine.
           </p>
@@ -46,12 +46,13 @@ const HeroSection = () => {
         </div>
 
         {/* Right Image Container */}
-        <div className="absolute right-[240px] -top-22 z-0 block h-full w-[410px] overflow-visible">
+        <div className="absolute right-[266px] -top-22 z-0 block h-full w-[410px] overflow-visible">
           <div className="relative h-full w-full">
             <Image
               src="/Landing/Stand Up Pouch Front latest mockup.png"
               alt="Yuvaya Daily Greens + Collagen Pouch"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="origin-bottom scale-[1.4] object-contain object-bottom"
               priority
             />

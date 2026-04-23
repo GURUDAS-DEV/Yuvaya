@@ -18,9 +18,9 @@ const cards = [
 const AboutUs = () => {
     return (
         /* Parent div: w-100%, h-763px, flex-col, justify-end, padding 40px 0 60px 0, gap 30px */
-        <section className="box-border flex h-[763px] rounded-3xl mt-3 min-h-screen w-full flex-col items-center justify-end gap-[30px] overflow-clip bg-[#26312d] px-0 pt-[40px] pb-[60px]">
+        <section className="box-border flex  rounded-3xl mt-3 min-h-screen w-full flex-col items-center justify-end gap-[30px] overflow-clip bg-[#26312d] px-0 pt-[40px] pb-[60px]">
             {/* About Us heading: antic didone, 60px, tracking 0.01em, color #fffdf2 */}
-            <h2 className="z-[1] whitespace-pre font-antic-didone text-[64px] font-semibold leading-[1.2] tracking-[0.01em] text-[#fffdf2]">
+            <h2 className="z-[1] mt-10 whitespace-pre font-antic-didone text-[64px] font-semibold leading-[1.2] tracking-[0.01em] text-[#fffdf2]">
                 About Us
             </h2>
 
