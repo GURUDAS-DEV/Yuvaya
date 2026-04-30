@@ -15,7 +15,7 @@ const repeatedItems = [...items, ...items, ...items, ...items, ...items, ...item
 
 const ScrollingSection = () => {
     return (
-        <div className="relative flex h-[90px] w-full flex-row content-center items-center justify-start overflow-clip bg-[#26312d] p-0">
+        <div className="relative flex h-[60px] w-full flex-row content-center items-center justify-start overflow-clip bg-[#26312d] p-0 sm:h-[70px] md:h-[80px] lg:h-[90px]">
             <motion.div
                 className="flex w-max flex-row flex-nowrap items-center"
                 animate={{ x: ["0%", "-50%"] }}
@@ -28,7 +28,7 @@ const ScrollingSection = () => {
                 {repeatedItems.map((text, index) => (
                     <span
                         key={index}
-                        className="font-cormorant shrink-0 whitespace-nowrap pr-[45px] text-[26px] font-normal italic leading-[1.2] tracking-normal text-[#fffdf2]"
+                        className="font-cormorant shrink-0 whitespace-nowrap pr-[20px] text-[16px] font-normal italic leading-[1.2] tracking-normal text-[#fffdf2] sm:pr-[30px] sm:text-[20px] md:pr-[40px] md:text-[24px] lg:pr-[45px] lg:text-[26px]"
                     >
                         {text}
                     </span>

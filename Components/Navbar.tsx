@@ -42,7 +42,7 @@ const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <div className="font-poppins fixed top-3 left-1/2 z-50 w-full -translate-x-1/2 px-2 sm:px-4">
+    <div className="font-poppins fixed top-3 left-1/2 z-100 w-full -translate-x-1/2 px-2 sm:px-4">
       <motion.nav
         className="mx-auto flex h-14 items-center justify-between rounded-full bg-[#191a1d] px-3 sm:px-5"
         style={{

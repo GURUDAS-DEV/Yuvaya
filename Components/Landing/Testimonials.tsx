@@ -253,8 +253,8 @@ const Testimonials = () => {
             <ZigzagSVG color="green" className="absolute z-0 hidden md:block" width={88} height={52}
                 style={{ top: "75%", left: "18%", transform: "rotate(-3deg)" }} />
             {/* Top-right near heading */}
-            <ZigzagSVG color="green" className="absolute z-0 hidden md:block" width={85} height={50}
-                style={{ top: "14%", right: "24%", transform: "rotate(20deg)" }} />
+            <ZigzagSVG color="green" className="absolute top-[14%] right-[2%] md:right-[5%] lg:right-[18%] z-0 hidden md:block" width={85} height={50}
+                style={{ transform: "rotate(20deg)" }} />
             {/* Right side upper */}
             <ZigzagSVG color="green" className="absolute z-0 hidden md:block" width={110} height={75}
                 style={{ top: "28%", right: "13%", transform: "rotate(40deg)" }} />

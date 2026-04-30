@@ -59,7 +59,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Image Container */}
-          <div className="relative z-0 mt-4 flex w-full justify-center md:mt-2 lg:absolute right-[20%] lg:right-[15%] lg:top-[-95px] lg:mt-0 lg:w-auto lg:justify-end">
+          <div className="relative z-0 mt-4 flex w-full justify-center md:mt-2 -top-20 lg:absolute right-[20%] lg:right-[15%] lg:top-[-95px] lg:mt-0 lg:w-auto lg:justify-end">
             <div className="relative w-[min(84vw,420px)] sm:w-[min(66vw,470px)] md:w-[min(52vw,500px)] lg:w-[370px]">
               <div className="relative aspect-[3/5] w-full overflow-visible">
                 <Image
@@ -75,7 +75,7 @@ const HeroSection = () => {
                 {/* Green — top right */}
                 <ZigzagSVG
                   color="green"
-                  className="absolute -z-10 top-[7%] right-[12%] sm:right-[10%] lg:right-[8%] rotate-[85deg] sm:rotate-[75deg] lg:rotate-[68deg]"
+                  className="absolute -z-10 top-[29%] sm:top-[7%] right-[12%] sm:right-[10%] lg:right-[8%] rotate-[85deg] sm:rotate-[75deg] lg:rotate-[68deg]"
                   width={100}
                   height={50}
                   style={{
@@ -86,7 +86,7 @@ const HeroSection = () => {
                 {/* Green — center left */}
                 <ZigzagSVG
                   color="green"
-                  className="absolute z-20 top-[61%] right-[50%] sm:right-[48%] lg:right-[45%] rotate-[75deg] sm:rotate-[65deg] lg:rotate-[55deg]"
+                  className="absolute z-20 top-[76%] sm:top-[61%] right-[50%] sm:right-[48%] lg:right-[45%] rotate-[75deg] sm:rotate-[65deg] lg:rotate-[55deg]"
                   width={100}
                   height={65}
                   style={{
@@ -97,7 +97,7 @@ const HeroSection = () => {
                 {/* Green — bottom center */}
                 <ZigzagSVG
                   color="green"
-                  className="absolute z-20 bottom-[5%] right-[32%] sm:right-[30%] lg:right-[28%] rotate-[30deg] sm:rotate-[22deg] lg:rotate-[14deg]"
+                  className="absolute z-20 bottom-[-5%] sm:bottom-[5%] right-[32%] sm:right-[30%] lg:right-[28%] rotate-[14deg]"
                   width={100}
                   height={58}
                   style={{
@@ -108,7 +108,7 @@ const HeroSection = () => {
                 {/* Orange — top right (inside on mobile, peeks out on sm+) */}
                 <ZigzagSVG
                   color="orange"
-                  className="absolute z-20 top-[24%] right-[-20%] sm:right-[-30%] lg:right-[-40%] rotate-[60deg] sm:rotate-[50deg] lg:rotate-[40deg]"
+                  className="absolute z-20 top-[46%] sm:top-[24%] right-[-20%] sm:right-[-30%] lg:right-[-40%] rotate-[40deg]"
                   width={115}
                   height={72}
                   style={{
@@ -119,7 +119,7 @@ const HeroSection = () => {
                 {/* Orange — mid left */}
                 <ZigzagSVG
                   color="orange"
-                  className="absolute z-20 top-[39%] left-[10%] sm:left-[12%] lg:left-[14%] rotate-[20deg] sm:rotate-[10deg] lg:rotate-[0deg]"
+                  className="absolute z-20 top-[54%] sm:top-[39%] left-[18%] sm:left-[12%] lg:left-[14%] rotate-0"
                   width={100}
                   height={75}
                   style={{
@@ -130,7 +130,7 @@ const HeroSection = () => {
                 {/* Orange — bottom right (inside on mobile, peeks out on sm+) */}
                 <ZigzagSVG
                   color="orange"
-                  className="absolute z-20 bottom-[24%] right-[-15%] sm:right-[-24%] lg:right-[-33%] rotate-[-20deg] sm:rotate-[-12deg] lg:rotate-[-5deg]"
+                  className="absolute z-20 bottom-[10%] sm:bottom-[24%] right-[-15%] sm:right-[-24%] lg:right-[-33%] lg:rotate-[-5deg]"
                   width={110}
                   height={70}
                   style={{

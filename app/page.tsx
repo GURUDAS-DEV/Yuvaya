@@ -11,6 +11,7 @@ import Testimonials from "@/Components/Landing/Testimonials";
 import NewsLetter from "@/Components/Landing/NewsLetter";
 import VerticalInstaPost from "@/Components/Landing/VerticalInstaPost";
 import Footer from "@/Components/Footer";
+import InstagramReelsScroller from "@/Components/Landing/InstagramReelsScroller";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <MiddleBanner />
         <ShopFromUs />
         <LowerBanner />
+        <InstagramReelsScroller/>
         <AboutUs />
         <Testimonials />
         <FAQs />

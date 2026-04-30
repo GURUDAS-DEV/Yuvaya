@@ -65,7 +65,7 @@ const FAQs = () => {
         </div>
 
         {/* Heading */}
-        <h2 className="whitespace-pre text-center font-antic-didone text-[28px] font-[600] leading-[1.1] tracking-[0.03em] text-[#000000] md:text-[40px] md:leading-[1]">
+        <h2 className="whitespace-pre text-center font-antic-didone text-[24px] font-[600] leading-[1.1] tracking-[0.03em] text-[#000000] md:text-[40px] md:leading-[1]">
           Frequently Asked Questions
         </h2>
       </div>

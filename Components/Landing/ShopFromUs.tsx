@@ -28,7 +28,7 @@ const ShopFromUs = () => {
     const [activeThumbnail, setActiveThumbnail] = useState(0);
 
     return (
-        <section className="w-full pt-14 bg-[#fffdf2] px-6 ">
+        <section className="w-full pt-14 bg-[#fffdf2] px-6 pb-10 ">
             {/* Section Header */}
             <div className="mb-8 flex flex-col items-center gap-2 text-center sm:mb-12">
                 <h2 className="font-antic-didone font-semibold text-[36px] leading-[1.2] tracking-[0.01em] text-black sm:text-[48px] lg:text-[60px]">
@@ -66,16 +66,19 @@ const ShopFromUs = () => {
                                 </span>
                             </div>
 
-                            {/* Product image — always front pouch */}
-                            <div className="absolute inset-0 z-30 flex items-center justify-center">
-                                <Image
-                                    src="/Landing/Stand Up Pouch Front latest mockup.png"
-                                    alt="Collagreens Stand Up Pouch"
-                                    fill
-                                    sizes="(max-width: 768px) 100vw, 50vw"
-                                    className="object-contain object-center p-6 sm:p-8 lg:p-10"
-                                    priority
-                                />
+                            {/* Product image — changes based on selected thumbnail */}
+                            <div className="absolute inset-0 z-30 flex items-center justify-center p-8 sm:p-10 lg:p-12">
+                                <div className="relative h-full w-full max-h-full max-w-full">
+                                    <Image
+                                        src={thumbnails[activeThumbnail].src}
+                                        alt={thumbnails[activeThumbnail].alt}
+                                        key={activeThumbnail}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        className="object-contain object-center"
+                                        priority
+                                    />
+                                </div>
                             </div>
 
                             {/* Pack label badge at bottom right */}
@@ -174,11 +177,11 @@ const ShopFromUs = () => {
                             </p>
                         </div>
                         {/* CTA Buttons */}
-                        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-4">
-                            <button className="box-border rounded-full border border-gray-400 bg-white px-6 py-2.5 sm:px-8 sm:py-3 font-poppins text-[14px] sm:text-[16px] font-medium text-black transition-all hover:border-[#34803c] hover:text-[#34803c]">
+                        <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-4 ">
+                            <button className="box-border rounded-full border border-gray-400 bg-white px-6 py-2.5 sm:px-8 sm:py-3 font-poppins text-[14px] sm:text-[16px] font-medium text-black transition-all hover:border-[#34803c] hover:text-[#34803c] ">
                                 Add to Cart
                             </button>
-                            <button className="box-border rounded-full border border-gray-300 bg-[#fffc60] px-6 py-2.5 sm:px-10 sm:py-3 font-poppins text-[14px] sm:text-[16px] font-medium text-black transition-all hover:bg-[#f5f014]">
+                            <button className="box-border rounded-full border border-gray-300 bg-[#fffc60] px-6 py-2.5 sm:px-10 sm:py-3 font-poppins text-[14px] sm:text-[16px] font-medium text-black transition-all hover:bg-[#f5f014] ">
                                 Buy Now
                             </button>
                         </div>
