@@ -10,7 +10,7 @@ const variants = [
 ];
 
 const thumbnails = [
-    { src: "/Landing/Stand Up Pouch Back latest mockup.png", alt: "Pouch Back" },
+    { src: "/Landing/Stand Up Pouch Front latest mockup.png", alt: "Pouch Front" },
     { src: "/Landing/Sachet Front latest mockup.png", alt: "Sachet Front" },
     { src: "/Landing/Sachet Back latest mockup.png", alt: "Sachet Back" },
 ];

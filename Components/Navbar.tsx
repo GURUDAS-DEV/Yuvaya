@@ -17,16 +17,16 @@ const Navbar = () => {
   const { scrollY } = useScroll();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const shrinkThreshold = 10;
+  const shrinkThreshold = 20;
 
   // Keep near-full width on mobile and compact on desktop while scrolling.
   const navWidth = useTransform(
     scrollY,
     [0, shrinkThreshold],
-    ["96%", "92%"]
+    ["98%", "92%"]
   );
 
-  const navMaxWidth = useTransform(scrollY, [0, shrinkThreshold], [1200, 980]);
+  const navMaxWidth = useTransform(scrollY, [0, shrinkThreshold], [1200, 800]);
 
   useEffect(() => {
     if (!isMobileMenuOpen) return;
