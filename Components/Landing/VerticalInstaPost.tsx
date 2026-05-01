@@ -61,7 +61,7 @@ const VerticalInstaPost = () => {
                             href={instagramUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative block shrink-0 overflow-hidden rounded-lg w-65 h-65 sm:w-80 sm:h-80 md:w-100 md:h-100"
+                            className="group relative block shrink-0 overflow-hidden rounded-lg w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96"
                         >
                             <div
                                 aria-hidden="true"
