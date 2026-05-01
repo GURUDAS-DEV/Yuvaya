@@ -3,17 +3,27 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const coverImages = [
+  "/Landing/Insta_Post_Cover/IMG_8752.PNG",
+  "/Landing/Insta_Post_Cover/IMG_8753.PNG",
+  "/Landing/Insta_Post_Cover/IMG_8755.PNG",
+  "/Landing/Insta_Post_Cover/IMG_8756.PNG",
+  "/Landing/Insta_Post_Cover/IMG_8757.PNG",
+  "/Landing/Insta_Post_Cover/IMG_8758.PNG",
+  "/Landing/Insta_Post_Cover/IMG_8760.PNG",
+];
+
 const reels = [
-  { url: "https://www.instagram.com/reel/DXBYh0UPBF5/", id: "DXBYh0UPBF5" },
-  { url: "https://www.instagram.com/reel/DVG8WERAuJj/", id: "DVG8WERAuJj" },
-  { url: "https://www.instagram.com/reel/DVYlhIqAtnZ/", id: "DVYlhIqAtnZ" },
-  { url: "https://www.instagram.com/reel/DU7KmA5AtB-/", id: "DU7KmA5AtB-" },
-  { url: "https://www.instagram.com/reel/DUCz2Logm9i/", id: "DUCz2Logm9i" },
-  { url: "https://www.instagram.com/reel/DUFyM3Fgi7T/", id: "DUFyM3Fgi7T" },
-  { url: "https://www.instagram.com/reel/DU4jlITgo-j/", id: "DU4jlITgo-j" },
-  { url: "https://www.instagram.com/reel/DUanJECAuhA/", id: "DUanJECAuhA" },
-  { url: "https://www.instagram.com/reel/DXWmp-Fgl4N/", id: "DXWmp-Fgl4N" },
-  { url: "https://www.instagram.com/reel/DU23jLxApzv/", id: "DU23jLxApzv" },
+  { url: "https://www.instagram.com/reel/DXBYh0UPBF5/", id: "DXBYh0UPBF5", coverImage: coverImages[0] },
+  { url: "https://www.instagram.com/reel/DVG8WERAuJj/", id: "DVG8WERAuJj", coverImage: coverImages[1] },
+  { url: "https://www.instagram.com/reel/DVYlhIqAtnZ/", id: "DVYlhIqAtnZ", coverImage: coverImages[2] },
+  { url: "https://www.instagram.com/reel/DU7KmA5AtB-/", id: "DU7KmA5AtB-", coverImage: coverImages[3] },
+  { url: "https://www.instagram.com/reel/DUCz2Logm9i/", id: "DUCz2Logm9i", coverImage: coverImages[4] },
+  { url: "https://www.instagram.com/reel/DUFyM3Fgi7T/", id: "DUFyM3Fgi7T", coverImage: coverImages[5] },
+  { url: "https://www.instagram.com/reel/DU4jlITgo-j/", id: "DU4jlITgo-j", coverImage: coverImages[6] },
+  { url: "https://www.instagram.com/reel/DUanJECAuhA/", id: "DUanJECAuhA", coverImage: coverImages[0] },
+  { url: "https://www.instagram.com/reel/DXWmp-Fgl4N/", id: "DXWmp-Fgl4N", coverImage: coverImages[1] },
+  { url: "https://www.instagram.com/reel/DU23jLxApzv/", id: "DU23jLxApzv", coverImage: coverImages[2] },
 ];
 
 /* ── 200×200px placeholder card ── */
@@ -23,33 +33,19 @@ const ReelCard = ({ reel }: { reel: (typeof reels)[number] }) => {
       href={reel.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative block shrink-0 overflow-hidden rounded-[10px] transition-transform duration-300 hover:scale-[1.02]"
+      className="relative block shrink-0 overflow-hidden rounded-[10px]"
       style={{
         width: "200px",
         height: "200px",
         backgroundColor: "#bbbbbb",
       }}
     >
-      {/* Instagram gradient border overlay on hover */}
-      <div
-        className="absolute inset-0 z-10 opacity-0 transition-opacity duration-300 hover:opacity-100"
-        style={{
-          background: "linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)",
-          padding: "2px",
-          borderRadius: "10px",
-        }}
-      >
-        <div className="h-full w-full rounded-[8px] bg-neutral-900" />
-      </div>
-
-      {/* Placeholder icon */}
-      <div className="relative z-0 flex h-full w-full items-center justify-center">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#888" strokeWidth="1.5">
-          <rect x="2" y="2" width="20" height="20" rx="5" />
-          <circle cx="12" cy="12" r="5" />
-          <circle cx="17.5" cy="6.5" r="1" fill="#888" stroke="none" />
-        </svg>
-      </div>
+      {/* Cover image */}
+      <img
+        src={reel.coverImage}
+        alt={reel.id}
+        className="relative z-0 h-full w-full object-cover"
+      />
     </a>
   );
 };
