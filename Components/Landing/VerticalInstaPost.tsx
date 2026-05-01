@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 const instaPosts = [
@@ -12,8 +11,10 @@ const instaPosts = [
     { src: "/Landing/InstaPost_1.jpg", alt: "Yuvaya sachets flat lay" },
 ];
 
-// Duplicate for seamless infinite scroll
-const repeatedPosts = [...instaPosts, ...instaPosts, ...instaPosts, ...instaPosts];
+const instagramUrl = "https://www.instagram.com/yuvaya";
+
+// Duplicate once for a seamless loop while keeping the DOM lighter.
+const repeatedPosts = [...instaPosts, ...instaPosts];
 
 const InstagramIcon = () => (
     <svg
@@ -44,8 +45,6 @@ const VerticalInstaPost = () => {
             className="relative w-full overflow-hidden py-8 sm:py-12 md:py-16"
             style={{ backgroundColor: "#fffdf2" }}
         >
-
-            {/* Scrolling container */}
             <div className="relative w-full overflow-hidden">
                 <motion.div
                     className="flex w-max flex-row flex-nowrap gap-2 sm:gap-3"
@@ -59,22 +58,16 @@ const VerticalInstaPost = () => {
                     {repeatedPosts.map((post, index) => (
                         <a
                             key={index}
-                            href="https://www.instagram.com/yuvaya"
+                            href={instagramUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative block shrink-0 overflow-hidden rounded-[8px] w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[400px] md:h-[400px]"
+                            className="group relative block shrink-0 overflow-hidden rounded-lg w-65 h-65 sm:w-80 sm:h-80 md:w-100 md:h-100"
                         >
-                            {/* Post image */}
-                            <Image
-                                src={post.src}
-                                alt={post.alt}
-                                fill
-                                sizes="(max-width: 640px) 260px, (max-width: 768px) 320px, 400px"
-                                priority={index < 4}
-                                className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-105"
+                            <div
+                                aria-hidden="true"
+                                className="absolute inset-0 bg-center bg-cover bg-no-repeat transition-transform duration-500 ease-out group-hover:scale-105"
+                                style={{ backgroundImage: `url(${post.src})` }}
                             />
-
-                            {/* Hover overlay — blur + Instagram icon */}
                             <div
                                 className="absolute inset-0 z-10 flex items-center justify-center opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
                                 style={{
@@ -83,6 +76,7 @@ const VerticalInstaPost = () => {
                                     backgroundColor: "rgba(122, 122, 122, 0.11)",
                                 }}
                             >
+                                <span className="sr-only">Open {post.alt} on Instagram</span>
                                 <InstagramIcon />
                             </div>
                         </a>
