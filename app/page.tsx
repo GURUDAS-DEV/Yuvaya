@@ -12,6 +12,7 @@ import NewsLetter from "@/Components/Landing/NewsLetter";
 import VerticalInstaPost from "@/Components/Landing/VerticalInstaPost";
 import Footer from "@/Components/Footer";
 import InstagramReelsScroller from "@/Components/Landing/InstagramReelsScroller";
+import Chatbot from "@/Components/Shared/Chatbot";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <VerticalInstaPost />
         <Footer />
       </main>
+      <Chatbot />
     </div>
   );
 }
