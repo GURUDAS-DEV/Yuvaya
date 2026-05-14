@@ -23,12 +23,43 @@ const features = [
     "Tested amino acids",
 ];
 
+const testingParameters = [
+    {
+        src: "/Landing/Microbial_infection.webp",
+        label: "Microbial contamination",
+    },
+    {
+        src: "/Landing/Amino_acid.png",
+        label: "Amino acid profiling",
+    },
+    {
+        src: "/Landing/Heavy_metal.png",
+        label: "Heavy metal test",
+    },
+    {
+        src: "/Landing/pesticide_testing.avif",
+        label: "Pesticide testing",
+    },
+    {
+        src: "/Landing/Aflatoxin_testing.png",
+        label: "Aflatoxin testing",
+    },
+    {
+        src: "/Landing/Stability_testing.avif",
+        label: "Stability testing",
+    },
+    {
+        src: "/Landing/Organoleptic_testing.png",
+        label: "Organoleptic testing",
+    },
+];
+
 const ShopFromUs = () => {
     const [selectedVariant, setSelectedVariant] = useState(0);
     const [activeThumbnail, setActiveThumbnail] = useState(0);
 
     return (
-        <section className="w-full pt-14 bg-[#fffdf2] px-6 pb-10 ">
+        <section id="/shop" className="w-full pt-14 bg-[#fffdf2] px-6 pb-10 ">
             {/* Section Header */}
             <div className="mb-8 flex flex-col items-center gap-2 text-center sm:mb-12">
                 <h2 className="font-tt-ramillas font-medium text-[36px] leading-[1.2] tracking-[0.01em] text-black sm:text-[48px] lg:text-[60px]">
@@ -236,17 +267,17 @@ const ShopFromUs = () => {
                         </h3>
                         
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                            {[
-                                { icon: "🧫", label: "Microbial contamination" },
-                                { icon: "🧬", label: "Amino acid profiling" },
-                                { icon: "⚖️", label: "Heavy metal test" },
-                                { icon: "🌾", label: "Pesticide testing" },
-                                { icon: "☣️", label: "Aflatoxin testing" },
-                                { icon: "⏱️", label: "Stability testing" },
-                                { icon: "👃", label: "Organoleptic testing" },
-                            ].map((test, i) => (
+                            {testingParameters.map((test, i) => (
                                 <div key={i} className="bg-white border-2 border-[#34803c] p-4 rounded-xl text-center">
-                                    <p className="text-3xl mb-2">{test.icon}</p>
+                                    <div className="relative mx-auto mb-2 h-10 w-10 sm:h-11 sm:w-11">
+                                        <Image
+                                            src={test.src}
+                                            alt={test.label}
+                                            fill
+                                            sizes="44px"
+                                            className="object-contain"
+                                        />
+                                    </div>
                                     <p className="font-switzer text-[13px] sm:text-[14px] leading-[1.3] text-[#333]">
                                         {test.label}
                                     </p>

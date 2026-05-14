@@ -153,9 +153,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant_garamond.variable} ${poppins.variable} ${newTitle.variable} ${anti_didone.variable} ${ttRamillas.variable} ${switzer.variable} h-full antialiased`}
+      className={`${cormorant_garamond.variable} scroll-smooth ${poppins.variable} ${newTitle.variable} ${anti_didone.variable} ${ttRamillas.variable} ${switzer.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white">{children}</body>
+      <body className="min-h-full scroll-smooth flex flex-col bg-white">{children}</body>
     </html>
   );
 }

@@ -16,7 +16,7 @@ import Chatbot from "@/Components/Shared/Chatbot";
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="w-full scroll-smooth">
       <Navbar />
       <main className="w-full  pt-20 bg-white relative flex flex-col">
         <HeroSection />
