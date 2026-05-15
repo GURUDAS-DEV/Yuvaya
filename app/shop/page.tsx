@@ -391,21 +391,21 @@ export const ProductTransparency = () => {
                 alt={row.alt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className={`object-contain p-6 sm:p-10 lg:p-14 ${isEven ? "lg:object-right" : "lg:object-left"}`}
+                className={`object-contain p-6 sm:p-8 lg:p-10 ${isEven ? "lg:object-right" : "lg:object-left"}`}
               />
             </div>
 
             {/* Text half */}
             <div
-              className={`w-full lg:w-1/2 flex flex-col justify-center py-8 lg:py-12 ${isEven ? "items-start px-6 lg:pl-10 lg:pr-16 bg-white" : "items-end px-6 lg:pr-10 lg:pl-16 bg-[#fffdf2]"}`}
+              className={`w-full lg:w-1/2 flex flex-col justify-center py-8 lg:py-12 ${isEven ? "items-start pl-6 pr-10 lg:pl-10 lg:pr-16 bg-white" : "items-end pr-6 pl-10 lg:pr-10 lg:pl-16 bg-[#fffdf2]"}`}
             >
               <span className={`font-poppins text-[11px] ${isEven ? "text-left" : "text-right"} font-semibold uppercase tracking-widest text-[#34803c] mb-3`}>
                 {String(i + 1).padStart(2, "0")} / 06
               </span>
-              <h3 className={`font-tt-ramillas text-[28px] ${isEven ? "text-left" : "text-right"} sm:text-[34px] lg:text-[42px] font-semibold text-black leading-[1.15] mb-4 lg:mb-6`}>
+              <h3 className={`font-tt-ramillas text-[24px] ${isEven ? "text-left" : "text-right"} sm:text-[30px] lg:text-[36px] font-semibold text-black leading-[1.15] mb-4 lg:mb-6`}>
                 {row.title}
               </h3>
-              <p className={`font-poppins text-[14px] ${isEven ? "text-left" : "text-right"} sm:text-[16px] lg:text-[18px] text-[#555] leading-[1.6] max-w-lg`}>
+              <p className={`font-poppins text-[13px] ${isEven ? "text-left" : "text-right"} sm:text-[14px] lg:text-[15px] text-[#555] leading-[1.6] max-w-lg`}>
                 {row.desc}
               </p>
             </div>
