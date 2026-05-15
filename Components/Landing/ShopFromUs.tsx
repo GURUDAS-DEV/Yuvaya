@@ -2,6 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const variants = [
     { label: "30 days pack", price: "₹ 3,100", img: "/Landing/Stand Up Pouch Front latest mockup.png" },
@@ -212,9 +213,9 @@ const ShopFromUs = () => {
                         </div>
                         {/* CTA Buttons */}
                         <div className="flex w-full flex-col gap-3 sm:flex-row sm:gap-4 ">
-                            <button className="box-border rounded-full border border-gray-400 bg-white px-6 py-2.5 sm:px-8 sm:py-3 font-poppins text-[14px] sm:text-[16px] font-medium text-black transition-all hover:border-[#34803c] hover:text-[#34803c] ">
-                                Add to Cart
-                            </button>
+                            <Link href='/shop' className="box-border rounded-full border border-gray-400 bg-white px-6 py-2.5 sm:px-8 sm:py-3 font-poppins text-[14px] sm:text-[16px] font-medium text-black transition-all hover:border-[#34803c] hover:text-[#34803c] ">
+                                View Details
+                            </Link>
                             <button className="box-border rounded-full border border-gray-300 bg-[#fffc60] px-6 py-2.5 sm:px-10 sm:py-3 font-poppins text-[14px] sm:text-[16px] font-medium text-black transition-all hover:bg-[#f5f014] ">
                                 Buy Now
                             </button>
@@ -226,7 +227,7 @@ const ShopFromUs = () => {
                         <h3 className="font-tt-ramillas text-[24px] sm:text-[28px] lg:text-[32px] font-semibold leading-[1.2] tracking-[0.02em] text-black mb-6">
                             Clinical studies and results
                         </h3>
-                        
+
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                             <div className="bg-[#f5f5f5] p-6 rounded-2xl">
                                 <p className="font-tt-ramillas text-[32px] font-bold text-[#34803c] mb-2">28%</p>
@@ -265,7 +266,7 @@ const ShopFromUs = () => {
                         <h3 className="font-tt-ramillas text-[24px] sm:text-[28px] lg:text-[32px] font-semibold leading-[1.2] tracking-[0.02em] text-black mb-6">
                             Testing parameters
                         </h3>
-                        
+
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             {testingParameters.map((test, i) => (
                                 <div key={i} className="bg-white border-2 border-[#34803c] p-4 rounded-xl text-center">
@@ -291,7 +292,7 @@ const ShopFromUs = () => {
                         <h3 className="font-tt-ramillas text-[24px] sm:text-[28px] lg:text-[32px] font-semibold leading-[1.2] tracking-[0.02em] text-black mb-6">
                             How to use
                         </h3>
-                        
+
                         <div className="space-y-4">
                             <div className="flex gap-4">
                                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#34803c] text-white font-tt-ramillas font-bold shrink-0">1</div>

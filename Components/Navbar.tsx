@@ -44,7 +44,7 @@ const Navbar = () => {
   return (
     <div className="font-poppins fixed top-3 left-1/2 z-100 w-full -translate-x-1/2 px-2 sm:px-4">
       <motion.nav
-        className="mx-auto flex h-14 items-center justify-between rounded-full bg-[#191a1d] px-3 sm:px-5"
+        className="mx-auto flex h-16 items-center justify-between rounded-full bg-[#191a1d] px-3 sm:px-5"
         style={{
           width: navWidth,
           maxWidth: navMaxWidth,
@@ -75,7 +75,7 @@ const Navbar = () => {
             >
               <Link
                 href={link.href}
-                className="group relative whitespace-nowrap text-sm font-medium tracking-wide text-white transition-colors duration-200 hover:text-white/80"
+                className="group relative whitespace-nowrap text-base font-medium tracking-wide text-white transition-colors duration-200 hover:text-white/80"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full" />
@@ -164,7 +164,7 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="rounded-md px-2 py-1.5 text-sm font-medium tracking-wide text-white transition-colors hover:bg-white/10 hover:text-white/80"
+                className="rounded-md px-2 py-1.5 text-base font-medium tracking-wide text-white transition-colors hover:bg-white/10 hover:text-white/80"
               >
                 {link.name}
               </Link>

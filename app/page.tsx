@@ -12,12 +12,12 @@ import NewsLetter from "@/Components/Landing/NewsLetter";
 import VerticalInstaPost from "@/Components/Landing/VerticalInstaPost";
 import Footer from "@/Components/Footer";
 import InstagramReelsScroller from "@/Components/Landing/InstagramReelsScroller";
+import ClinicalResults from "@/Components/Landing/ClinicalResults";
 import Chatbot from "@/Components/Shared/Chatbot";
 
 export default function Home() {
   return (
-    <div className="w-full scroll-smooth">
-      <Navbar />
+    <div className="w-full ">
       <main className="w-full  pt-20 bg-white relative flex flex-col">
         <HeroSection />
         <ScrollingSection />
@@ -25,13 +25,12 @@ export default function Home() {
         <MiddleBanner />
         <ShopFromUs />
         <LowerBanner />
-        <InstagramReelsScroller/>
+        <InstagramReelsScroller />
         <AboutUs />
         <Testimonials />
         <FAQs />
         <NewsLetter />
         <VerticalInstaPost />
-        <Footer />
       </main>
       <Chatbot />
     </div>
