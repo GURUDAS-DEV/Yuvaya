@@ -249,7 +249,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex h-56 relative w-screen  justify-center overflow-hidden ">
+      <div className="flex h-14 sm:h-32 md:h-44 lg:h-56 relative w-screen  justify-center overflow-hidden ">
         <div className="absolute top-2 left-0 w-screen">
           <BottomFooter />
         </div>
